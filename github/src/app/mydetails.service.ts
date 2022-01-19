@@ -15,11 +15,11 @@ export class MydetailsService {
   
   getusers():Observable<any>{
     
-    return this.http.get<any>("https://api.github.com/users/uhuru-rawlings")
+    return this.http.get<any>("https://github.com/Njeri714/github_ip")
   }
   getrepos():Observable<any>{
     
-    return this.http.get<any>("https://api.github.com/users/uhuru-rawlings/repos")
+    return this.http.get<any>("https://github.com/Njeri714/github_ip/repos")
   }
   searchSearch(){
 
