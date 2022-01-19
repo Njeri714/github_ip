@@ -9,11 +9,15 @@ import { RepositoriesComponent } from './repositories/repositories.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    routingcomponents,
+    RepositoriesComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
