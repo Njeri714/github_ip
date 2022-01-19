@@ -1,0 +1,26 @@
+<div class="info">Search Repositories</div>
+<div class="formcards card">
+    <form action="" #forms="ngForm">
+        <input type="text" [(ngModel)]="username" #inputs="ngModel" name="username" id="username" placeholder="Enter github username">
+        <input type="submit" value="Submit" (click)="sendusername(forms)" name="submit" id="submits">
+    </form>
+</div>
+<table *ngIf="username" class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Repo_Id</th>
+            <th scope="col">Repo_Name</th>
+            <th scope="col">Repo_forks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let repo of repos; let i = index">
+            <th scope="row"> {{ i + 1 }}</th>
+            <td> {{ repo.id }} </td>
+            <td> {{ repo.name }} </td>
+            <td> {{ repo.forks }} </td>
+        </tr>
+    </tbody>
+</table>
+
