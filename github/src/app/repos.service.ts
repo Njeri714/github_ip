@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GetreposService {
-  tocken = "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";
+  tocken = "ghp_gzQJBoRhFCoKjMGDKCqd2cbhviOM9F1mBGYt";
   username = "";
   slash = "/"
   repos = "repos"
@@ -15,7 +15,7 @@ export class GetreposService {
   constructor(private http:HttpClient) { }
   
   getrepos():Observable<any>{
-    const url= "https://api.github.com/users/"
+    const url= "https://github.com/Njeri714/github_ip/"
     return this.http.get<any>(url + this.username +  this.slash + this.repos)
     
   }
