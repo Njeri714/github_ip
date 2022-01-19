@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="user">
+       <div class="text">
+         <span>Name: {{user.login}} </span>
+         <br>
+         <span>Followers: {{ user.followers }} </span>
+         <br>
+         <span>Following: {{ user.following }} </span>
+         <br>
+         <span>Number of Repositories: {{ user.public_repos }} </span>
+         <br>
+         <span>blog: <a href="{{ user.blog }}">techrollblogs.epizy.com</a> </span>
+       </div>
+        <img src="{{ user.avatar_url }}" alt="">
+    </div>
+    <div class="table">
+        <app-repositories [repos]="repos"></app-repositories>
+    </div>
+</div>
